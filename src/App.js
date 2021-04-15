@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {
+  Link,
+  Route
+} from "react-router-dom";
+
+const TestComp = (props) => {
+  return (
+    <div>
+      test success
+      <Link to="/">home</Link>
+    </div>
+  )
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <Route path="/about"><div>about <Link to="/">home</Link></div></Route>
+      <Route path="/today"><TestComp/></Route>
+      <Route exact path="/">
+        <div>
           Tim's personal website
-        </a>
-      </header>
+          <Link to="/today">testing</Link>
+          <Link to="/about">about</Link>
+        </div>
+      </Route>
+      
     </div>
   );
 }
