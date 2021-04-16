@@ -8,15 +8,6 @@ import pfp from './images/pfp.jpg'
 import styled from 'styled-components'
 import resume from './files/Tim_Cho_Resume_2020.pdf'
 
-const TestComp = (props) => {
-  return (
-    <div>
-      test success
-      <Link to="/">home</Link>
-    </div>
-  )
-}
-
 const BannerWrapper = styled.div`
   height: 40vh;
   width: 100%;
@@ -90,13 +81,18 @@ const Image = styled.img`
 const A = styled.a`
   color: #386fa4;
 `
+const StyledLink = styled(Link)`
+  color: #91e5f6;
+  font-size: 1.5rem;
+  margin: 10px;
+`
 
 // const intro = `Hi there! My Name is Tim Cho and I am a software engineer based in Ann Arbor, MI. I specialise in web development and creating human-centered digital products. Currently, I am completing my junior year at the University of Michigan and I will be interning at Hubspot in the coming summer.`
 
 const getIntro = () => {
   return (
     <div>
-    Hi there! My Name is Tim Cho and I am a software engineer based in Ann Arbor, MI. I specialise in web development and creating human-centered digital products. Currently, I am completing my junior year at the University of Michigan and will be interning at <A rel="noreferrer" href="https://www.hubspot.com/" target="_blank">Hubspot</A> in the coming summer.
+    Hi there! My name is Tim Cho and I am a software engineer based in Ann Arbor, MI. I specialise in web development and creating human-centered digital products. Currently, I am completing my junior year at the University of Michigan and will be interning at <A rel="noreferrer" href="https://www.hubspot.com/" target="_blank">Hubspot</A> in the coming summer.
     </div>
   )
 }
@@ -129,11 +125,32 @@ const Home = (props) => {
   )
 }
 
+const NavbarWrapper = styled.div`
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  display: flex;
+  flex-direction: row;
+  z-index: 10;
+  justify-content: flex-end
+`
+
+const NavBar = (props) => {
+  return (
+    <NavbarWrapper>
+      <StyledLink to="/">Home</StyledLink>
+      <StyledLink to="/about">Experiences</StyledLink>
+      <StyledLink to="/fun">Fun Stuff</StyledLink>
+    </NavbarWrapper>
+  )
+}
+
 function App() {
   return (
     <div className="App">
-      <Route path="/about"><div>about <Link to="/">home</Link></div></Route>
-      <Route path="/today"><TestComp/></Route>
+      <NavBar/>
+      <Route path="/about"><div>about</div></Route>
+      <Route path="/fun"><div>Fun page</div></Route>
       <Route exact path="/">
         <Home/>
         {/* Tim's personal website
