@@ -117,7 +117,7 @@ const Home = (props) => {
         <Intro>
           {getIntro()}
           <br/>
-          <A href={resume}>Feel free to check out my resume!</A>
+          Feel free to check out my <A href={resume} download>resume</A>!
         </Intro>
         <ImageWrapper>
           <Image src={pfp} alt="pfp"/>
