@@ -16,7 +16,7 @@ const TestComp = (props) => {
 }
 
 const BannerWrapper = styled.div`
-  height: 50vh;
+  height: 40vh;
   width: 100%;
   background-color: #133C55;
 `
@@ -24,12 +24,12 @@ const BannerWrapper = styled.div`
 const Banner = styled.img`
   position: relative;
   height: 100%;
-  left: -10%;
+  left: 0%;
 `
 
 const ContentWrapper = styled.div`
   position: absolute;
-  left: 50%;
+  left: 40%;
   top: 0%;
   width: 50%;
   height: 50vh;
@@ -37,8 +37,25 @@ const ContentWrapper = styled.div`
 `
 
 const Name = styled.div`
+  margin-left: 10%;
+  margin-top: 10%;
+  width: 50%;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 5rem;
+`
+
+const Description = styled.div`
+  margin-left: 11%;
+  margin-top: 1%;
+  width: 80%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  color: #91e5f6;
+`
+
+const DescriptionWrapper = styled.div`
+  height: 60vh;
+  background-color: #D9F6FC;
 `
 
 const Home = (props) => {
@@ -50,8 +67,11 @@ const Home = (props) => {
         <Banner src={gible} alt="gible"/>
         <ContentWrapper>
           <Name>Tim Cho</Name>
+          <Description>I like to build useful things</Description>
         </ContentWrapper>
       </BannerWrapper>
+      <DescriptionWrapper>
+      </DescriptionWrapper>
     </div>
     
     
