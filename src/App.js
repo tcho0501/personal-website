@@ -4,7 +4,9 @@ import {
   Route
 } from "react-router-dom";
 import gible from './images/Gible.png'
+import pfp from './images/pfp.jpg'
 import styled from 'styled-components'
+import resume from './files/Tim_Cho_Resume_2020.pdf'
 
 const TestComp = (props) => {
   return (
@@ -32,7 +34,7 @@ const ContentWrapper = styled.div`
   left: 40%;
   top: 0%;
   width: 50%;
-  height: 50vh;
+  height: 40vh;
   color: white;
 `
 
@@ -56,7 +58,48 @@ const Description = styled.div`
 const DescriptionWrapper = styled.div`
   height: 60vh;
   background-color: #D9F6FC;
+  display: flex;
+  flex-direction: row;
+  padding-left: 8%;
+  padding-right: 8%;
 `
+
+const Intro = styled.div`
+  color: #133C55;
+  font-size: 1.5rem;
+  width: 50%;
+  padding-top: 6%;
+  padding-left: 8%;
+  line-height: 1.6;
+`
+
+const ImageWrapper = styled.div`
+  position: relative;
+  width: 50%;
+  height: 100%;
+  padding-left: 5%;
+`
+
+const Image = styled.img`
+  position: relative;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 90%;
+`
+
+const A = styled.a`
+  color: #386fa4;
+`
+
+// const intro = `Hi there! My Name is Tim Cho and I am a software engineer based in Ann Arbor, MI. I specialise in web development and creating human-centered digital products. Currently, I am completing my junior year at the University of Michigan and I will be interning at Hubspot in the coming summer.`
+
+const getIntro = () => {
+  return (
+    <div>
+    Hi there! My Name is Tim Cho and I am a software engineer based in Ann Arbor, MI. I specialise in web development and creating human-centered digital products. Currently, I am completing my junior year at the University of Michigan and will be interning at <A rel="noreferrer" href="https://www.hubspot.com/" target="_blank">Hubspot</A> in the coming summer.
+    </div>
+  )
+}
 
 const Home = (props) => {
   return (
@@ -71,6 +114,14 @@ const Home = (props) => {
         </ContentWrapper>
       </BannerWrapper>
       <DescriptionWrapper>
+        <Intro>
+          {getIntro()}
+          <br/>
+          <A href={resume}>Feel free to check out my resume!</A>
+        </Intro>
+        <ImageWrapper>
+          <Image src={pfp} alt="pfp"/>
+        </ImageWrapper>
       </DescriptionWrapper>
     </div>
     
