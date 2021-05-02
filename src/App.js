@@ -14,7 +14,7 @@ import linkedin from './images/linkedin.svg'
 // import { ReactJs } from 'react-simple-icons';
 
 const GITHUB = "https://github.com/tcho0501"
-const LINKEDIN = "https://github.com/tcho0501"
+const LINKEDIN = "https://www.linkedin.com/in/tim-cho/"
 const EMAIL = "timcho@umich.edu"
 
 const BannerWrapper = styled.div`
