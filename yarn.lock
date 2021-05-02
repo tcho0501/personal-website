@@ -1675,6 +1675,11 @@
     "@types/yargs" "^15.0.0"
     "chalk" "^4.0.0"
 
+"@jxnblk/simple-icons@^1.0.0":
+  "integrity" "sha1-fI48a1W1s/uLLGkzmLhoC3BlDHU="
+  "resolved" "https://registry.npmjs.org/@jxnblk/simple-icons/-/simple-icons-1.0.0.tgz"
+  "version" "1.0.0"
+
 "@nodelib/fs.scandir@2.1.4":
   "integrity" "sha512-33g3pMJk3bg5nXbL/+CY6I2eJDzZAni49PfJnL5fghPTggPvBd/pFNSgJsdAgWptuFu7qq/ERvOYFlhvsLTCKA=="
   "resolved" "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.4.tgz"
@@ -10025,6 +10030,13 @@
   "resolved" "https://registry.npmjs.org/react-side-effect/-/react-side-effect-2.1.1.tgz"
   "version" "2.1.1"
 
+"react-simple-icons@^1.0.0-beta.5":
+  "integrity" "sha1-sCK622vYBgqz7WzzzlA+MApwY1Y="
+  "resolved" "https://registry.npmjs.org/react-simple-icons/-/react-simple-icons-1.0.0-beta.5.tgz"
+  "version" "1.0.0-beta.5"
+  dependencies:
+    "@jxnblk/simple-icons" "^1.0.0"
+
 "react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^16.3.0 || ^17.0.0", "react@^17.0.2", "react@>= 16", "react@>= 16.8.0", "react@>=15", "react@>=16.3.0", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
@@ -10907,6 +10919,11 @@
   "integrity" "sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0="
   "resolved" "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.2.tgz"
   "version" "3.0.2"
+
+"simple-icons@^4.22.0":
+  "integrity" "sha512-3jLw93rkN05o85xo1kvBQeZIWyuien/eHv0Cdey7pE+nYl62xUBkyDGYFSSuuqZGSTAL++yLNUf7koWVXSL06A=="
+  "resolved" "https://registry.npmjs.org/simple-icons/-/simple-icons-4.22.0.tgz"
+  "version" "4.22.0"
 
 "simple-swizzle@^0.2.2":
   "integrity" "sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo="

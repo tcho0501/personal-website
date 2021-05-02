@@ -8,6 +8,15 @@ import pfp from './images/pfp.jpg'
 import styled from 'styled-components'
 import resume from './files/Tim_Cho_Resume_2020.pdf'
 
+import github from './images/github.svg'
+import gmail from './images/gmail.svg'
+import linkedin from './images/linkedin.svg'
+// import { ReactJs } from 'react-simple-icons';
+
+const GITHUB = "https://github.com/tcho0501"
+const LINKEDIN = "https://github.com/tcho0501"
+const EMAIL = "timcho@umich.edu"
+
 const BannerWrapper = styled.div`
   height: 40vh;
   width: 100%;
@@ -57,7 +66,7 @@ const DescriptionWrapper = styled.div`
 
 const Intro = styled.div`
   color: #133C55;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   width: 50%;
   padding-top: 6%;
   padding-left: 8%;
@@ -82,9 +91,18 @@ const A = styled.a`
   color: #386fa4;
 `
 const StyledLink = styled(Link)`
-  color: #91e5f6;
+  color: #FF8C00;
   font-size: 1.5rem;
   margin: 10px;
+`
+
+const SocialsWrapper = styled.div`
+  margin-top: 10px;
+`
+
+const Icon = styled.img`
+  height: 24px;
+  margin: 5px;
 `
 
 // const intro = `Hi there! My Name is Tim Cho and I am a software engineer based in Ann Arbor, MI. I specialise in web development and creating human-centered digital products. Currently, I am completing my junior year at the University of Michigan and I will be interning at Hubspot in the coming summer.`
@@ -114,6 +132,11 @@ const Home = (props) => {
           {getIntro()}
           <br/>
           Feel free to check out my <A href={resume} download>resume</A>!
+          <SocialsWrapper>
+            <A rel="noopener noreferrer" target="_blank" href={GITHUB}><Icon src={github} alt="github"/></A>
+            <A rel="noopener noreferrer" target="_blank" href={LINKEDIN}><Icon src={linkedin} alt="linkedin"/></A>
+            <A href={`mailto:${EMAIL}`}><Icon src={gmail} alt="gmail"/></A>
+          </SocialsWrapper>
         </Intro>
         <ImageWrapper>
           <Image src={pfp} alt="pfp"/>
@@ -139,7 +162,7 @@ const NavBar = (props) => {
   return (
     <NavbarWrapper>
       <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/about">Experiences</StyledLink>
+      <StyledLink to="/projects">Projects</StyledLink>
       <StyledLink to="/fun">Fun Stuff</StyledLink>
     </NavbarWrapper>
   )
@@ -153,10 +176,6 @@ function App() {
       <Route path="/fun"><div>Fun page</div></Route>
       <Route exact path="/">
         <Home/>
-        {/* Tim's personal website
-        <img src={gible} alt="gible"/>
-        <Link to="/today">testing</Link>
-        <Link to="/about">about</Link> */}
       </Route>
       
     </div>
