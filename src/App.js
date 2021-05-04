@@ -11,6 +11,7 @@ import resume from './files/Tim_Cho_Resume_2020.pdf'
 import github from './images/github.svg'
 import gmail from './images/gmail.svg'
 import linkedin from './images/linkedin.svg'
+import FunPage from './pages/FunPage.jsx'
 // import { ReactJs } from 'react-simple-icons';
 
 const GITHUB = "https://github.com/tcho0501"
@@ -173,7 +174,7 @@ function App() {
     <div className="App">
       <NavBar/>
       <Route path="/about"><div>about</div></Route>
-      <Route path="/fun"><div>Fun page</div></Route>
+      <Route path="/fun"><FunPage/></Route>
       <Route exact path="/">
         <Home/>
       </Route>

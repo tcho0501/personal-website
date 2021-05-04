@@ -14,6 +14,7 @@
     "react-simple-icons": "^1.0.0-beta.5",
     "simple-icons": "^4.22.0",
     "styled-components": "^5.2.3",
+    "tier-display": "^0.1.6",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -41,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0"
   }
 }
